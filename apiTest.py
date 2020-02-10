@@ -34,11 +34,11 @@ for tweet in tweets:
         real_name=tweet.author.name, name=tweet.author.screen_name,
         tweet=tweet.text))
 
-media_files = set()
-for status in tweets:
-    media = status.entities.get('media', [])
-    if(len(media) > 0):
-        media_files.add(media[0]['media_url'])
+# media_files = set()
+# for status in tweets:
+#     media = status.entities.get('media', [])
+#     if(len(media) > 0):
+#         media_files.add(media[0]['media_surl'])
 
-for media_file in media_files:
-    wget.download(media_file)
+# for media_file in media_files:
+#     wget.download(media_file)
